@@ -1,0 +1,7 @@
+{
+  "name": "Copy of Minimalist Creative Portfolio",
+  "description": "A high-end, minimalist portfolio for a creative developer and designer, featuring an architectural UI and an integrated Gemini-powered AI assistant.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
