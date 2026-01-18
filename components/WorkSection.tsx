@@ -1,7 +1,9 @@
 
 import React from 'react';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const WorkSection: React.FC = () => {
+  const { ref, isVisible } = useScrollAnimation();
   const projects = [
     {
       img: '/images/VDP.png',
@@ -40,15 +42,15 @@ const WorkSection: React.FC = () => {
   ];
 
   return (
-    <section className="w-full py-16 sm:py-24 md:py-32 max-w-[1400px] mx-auto scroll-mt-20">
+    <section ref={ref} className="w-full py-16 sm:py-24 md:py-32 max-w-[1400px] mx-auto scroll-mt-20">
       <div className="text-left mb-16">
-        <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black uppercase tracking-tighter text-primary mb-4">Projects</h2>
-        <p className="text-lg text-primary/70">Showcase of my latest work and side projects</p>
+        <h2 className={`text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black uppercase tracking-tighter text-primary mb-4 ${isVisible ? 'animate-[slideInLeft_1s_ease-out]' : 'opacity-0'}`}>Projects</h2>
+        <p className={`text-lg text-primary/70 ${isVisible ? 'animate-[slideInLeft_1s_ease-out]' : 'opacity-0'}`} style={{ animationDelay: '0.1s', animationFillMode: 'both' }}>Showcase of my latest work and side projects</p>
       </div>
 
       <div className="space-y-10 sm:space-y-12 md:space-y-20">
         {projects.map((project, i) => (
-          <div key={i} className="bg-brand-light border border-primary/10 rounded-sm overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <div key={i} className={`bg-brand-light border border-primary/10 rounded-sm overflow-hidden shadow-sm hover:shadow-md transition-shadow ${isVisible ? 'animate-[slideInUp_1s_ease-out]' : 'opacity-0'}`} style={{ animationDelay: `${0.2 + i * 0.2}s`, animationFillMode: 'both' }}>
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 p-4 sm:p-6 md:p-8 lg:p-12">
               {/* Image Section */}
               <div className="lg:col-span-5">
