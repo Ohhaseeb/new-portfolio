@@ -22,25 +22,25 @@ const App: React.FC = () => {
   return (
     <div className="relative min-h-screen bg-background-main overflow-x-hidden flex flex-col">
       {/* Structural Grid Lines */}
-      <div className="grid-line-v left-6 md:left-10"></div>
-      <div className="grid-line-v right-6 md:right-10"></div>
-      
+      <div className="grid-line-v left-4 sm:left-6 md:left-10"></div>
+      <div className="grid-line-v right-4 sm:right-6 md:right-10"></div>
+
       <Header onNavigate={handleNavigate} />
-      
+
       <div className="flex-1 flex flex-col w-full">
         <Hero />
-        
-        
 
-        <div id="about" className="w-full px-6 md:px-10 border-b border-primary/5">
+
+
+        <div id="about" className="w-full px-4 sm:px-6 md:px-10 border-b border-primary/5">
           <AboutSection />
         </div>
 
-         <div id="work" className="w-full px-6 md:px-10 border-b border-primary/5">
+         <div id="work" className="w-full px-4 sm:px-6 md:px-10 border-b border-primary/5">
            <WorkSection />
         </div>
-        
-        <div id="contact" className="w-full px-6 md:px-10">
+
+        <div id="contact" className="w-full px-4 sm:px-6 md:px-10">
           <ContactSection />
         </div>
       </div>

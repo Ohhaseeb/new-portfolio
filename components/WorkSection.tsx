@@ -40,16 +40,16 @@ const WorkSection: React.FC = () => {
   ];
 
   return (
-    <section className="w-full py-32 max-w-[1400px] mx-auto scroll-mt-20">
+    <section className="w-full py-16 sm:py-24 md:py-32 max-w-[1400px] mx-auto scroll-mt-20">
       <div className="text-left mb-16">
-        <h2 className="text-4xl md:text-7xl font-black uppercase tracking-tighter text-primary mb-4">Projects</h2>
+        <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black uppercase tracking-tighter text-primary mb-4">Projects</h2>
         <p className="text-lg text-primary/70">Showcase of my latest work and side projects</p>
       </div>
 
-      <div className="space-y-20">
+      <div className="space-y-10 sm:space-y-12 md:space-y-20">
         {projects.map((project, i) => (
           <div key={i} className="bg-brand-light border border-primary/10 rounded-sm overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 p-8 md:p-12">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 p-4 sm:p-6 md:p-8 lg:p-12">
               {/* Image Section */}
               <div className="lg:col-span-5">
                 <div className="aspect-[4/3] overflow-hidden border border-primary/10 rounded-sm">
@@ -70,11 +70,11 @@ const WorkSection: React.FC = () => {
                     ))}
                   </div>
                   <div className="flex gap-3">
-                    <a href={project.liveUrl} className="flex items-center gap-2 px-4 py-2 border border-primary/20 rounded-sm text-sm font-bold uppercase tracking-wider text-primary hover:bg-primary hover:text-brand-light transition-colors">
+                    <a href={project.liveUrl} className="flex items-center gap-2 px-4 py-3 min-h-[44px] border border-primary/20 rounded-sm text-sm font-bold uppercase tracking-wider text-primary hover:bg-primary hover:text-brand-light transition-colors">
                       <span className="material-symbols-outlined text-sm">language</span>
                       Live Website
                     </a>
-                    <a href={project.codeUrl} className="flex items-center gap-2 px-4 py-2 border border-primary/20 rounded-sm text-sm font-bold uppercase tracking-wider text-primary hover:bg-primary hover:text-brand-light transition-colors">
+                    <a href={project.codeUrl} className="flex items-center gap-2 px-4 py-3 min-h-[44px] border border-primary/20 rounded-sm text-sm font-bold uppercase tracking-wider text-primary hover:bg-primary hover:text-brand-light transition-colors">
                       <span className="material-symbols-outlined text-sm">code</span>
                       View Code
                     </a>
@@ -85,7 +85,7 @@ const WorkSection: React.FC = () => {
               {/* Content Section */}
               <div className="lg:col-span-7 space-y-6">
                 <div>
-                  <h3 className="text-3xl md:text-4xl font-black uppercase tracking-tight text-primary mb-2">{project.title}</h3>
+                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-black uppercase tracking-tight text-primary mb-2">{project.title}</h3>
                   <p className="text-primary/70">{project.subtitle}</p>
                 </div>
 

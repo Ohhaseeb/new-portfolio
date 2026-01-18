@@ -37,8 +37,8 @@ const PortfolioChat: React.FC = () => {
   return (
     <>
       {/* FAB */}
-      <div className="fixed bottom-8 right-8 z-[60]">
-        <button 
+      <div className="fixed bottom-6 right-6 sm:bottom-8 sm:right-8 z-[60]">
+        <button
           onClick={() => setIsOpen(!isOpen)}
           className={`size-16 rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 transform hover:scale-110 active:scale-95 ${
             isOpen ? 'bg-primary text-brand-light rotate-90' : 'bg-primary text-brand-light hover:rotate-12'
@@ -52,7 +52,7 @@ const PortfolioChat: React.FC = () => {
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="fixed bottom-28 right-8 w-[90vw] md:w-[400px] max-h-[600px] h-[70vh] bg-white rounded-2xl shadow-2xl border border-primary/10 z-[60] flex flex-col overflow-hidden animate-in slide-in-from-bottom-8 fade-in">
+        <div className="fixed bottom-20 right-6 sm:bottom-28 sm:right-8 w-[95vw] sm:w-[85vw] md:w-[400px] max-h-[500px] h-[65vh] sm:h-[70vh] sm:max-h-[600px] bg-white rounded-2xl shadow-2xl border border-primary/10 z-[60] flex flex-col overflow-hidden animate-in slide-in-from-bottom-8 fade-in">
           <div className="bg-primary p-6 text-brand-light">
             <h3 className="font-bold text-lg uppercase tracking-widest">Assistant</h3>
             <p className="text-xs opacity-70">Powered by Gemini AI</p>
@@ -88,17 +88,17 @@ const PortfolioChat: React.FC = () => {
           </div>
 
           <form onSubmit={handleSubmit} className="p-4 border-t border-primary/5 flex gap-2">
-            <input 
+            <input
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder="Ask anything..."
-              className="flex-1 bg-primary/5 border-none rounded-lg px-4 py-2 text-sm text-primary placeholder:text-primary/40 focus:ring-2 focus:ring-primary/20"
+              className="flex-1 bg-primary/5 border-none rounded-lg px-4 py-3 text-sm text-primary placeholder:text-primary/40 focus:ring-2 focus:ring-primary/20"
             />
-            <button 
+            <button
               type="submit"
               disabled={isLoading}
-              className="bg-primary text-brand-light p-2 rounded-lg hover:opacity-90 transition-opacity disabled:opacity-50"
+              className="bg-primary text-brand-light p-3 rounded-lg hover:opacity-90 transition-opacity disabled:opacity-50 min-h-[44px] min-w-[44px] flex items-center justify-center"
             >
               <span className="material-symbols-outlined text-xl">send</span>
             </button>
