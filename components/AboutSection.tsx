@@ -38,7 +38,7 @@ const AboutSection: React.FC = () => {
         </div>
         <div className="lg:col-span-5 aspect-[4/5] bg-primary/5 rounded-sm overflow-hidden relative border border-primary/10">
           <img
-            src="public/images/Haseeb.jpeg"
+            src="/images/Haseeb.jpeg"
             alt="Haseeb Sayed"
             className="w-full h-full object-cover"
           />

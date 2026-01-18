@@ -4,7 +4,7 @@ import React from 'react';
 const WorkSection: React.FC = () => {
   const projects = [
     {
-      img: 'public/images/VDP.png',
+      img: '/images/VDP.png',
       title: 'VDP',
       subtitle: 'A SaaS application where coaches can create and assign specific day to day training to their clients',
       why: 'Vertical jump training is a crucial aspect of athletic development, however many programs are not tailored to the individual athlete and very overpriced. I was victim to this paying $100 a month for a program so I came up with VDP using my knowledge of software development and physical training to create a platform that is affordable and effective.',
@@ -14,9 +14,9 @@ const WorkSection: React.FC = () => {
       liveUrl: 'https://vertical-performance-development.vercel.app/',
       codeUrl: 'https://github.com/Ohhaseeb/vertical-performance-development'
     },
-    
+
     {
-      img: 'public/images/Analytics.png',
+      img: '/images/Analytics.png',
       title: 'Energy Consumption Dashboard',
       subtitle: 'A full stack web application to visualize energy data, routing engineered from multiple APIs such as PG&E, EnergyStar, and AccuEnergy (Disclaimer: this is a project done for work not personal)',
       why: 'Energy consumption insights are crucial for businesses to reduce costs and environmental impact. This project aimed to solve the problem of fragmented energy data across multiple sources. Dena Energy inc is a startup that provides energy consumption insights to businesses and they reached out to me and my team to develop this product for them.',
@@ -27,7 +27,7 @@ const WorkSection: React.FC = () => {
       codeUrl: 'https://github.com/Ohhaseeb/dena-energy-dashboard'
     },
     {
-      img: 'public/images/employerEval.png',
+      img: '/images/employerEval.png',
       title: 'EmployerEval',
       subtitle: 'A platform for students to rate and review their employers and internship experiences',
       why: 'Job seekers often lack reliable information about workplace culture and management practices before accepting positions. This creates an information asymmetry in the job market.',
