@@ -30,12 +30,14 @@ const App: React.FC = () => {
       <div className="flex-1 flex flex-col w-full">
         <Hero />
         
-        <div id="work" className="w-full px-6 md:px-10 border-b border-primary/5">
-           <WorkSection />
-        </div>
+        
 
         <div id="about" className="w-full px-6 md:px-10 border-b border-primary/5">
           <AboutSection />
+        </div>
+
+         <div id="work" className="w-full px-6 md:px-10 border-b border-primary/5">
+           <WorkSection />
         </div>
         
         <div id="contact" className="w-full px-6 md:px-10">

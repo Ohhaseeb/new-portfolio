@@ -10,7 +10,7 @@ const Header: React.FC<HeaderProps> = ({ onNavigate }) => {
   return (
     <header className="fixed top-0 left-0 w-full z-[100] bg-primary text-brand-light h-10 flex items-center justify-between px-6 border-b border-primary/10">
       <div className="text-[10px] font-black uppercase tracking-[0.2em]">
-        AVAILABLE FOR WORK 2025
+        OPEN TO OPPORTUNITES IN THE BAY AREA
       </div>
       
       <div className="flex items-center gap-4">
@@ -23,6 +23,7 @@ const Header: React.FC<HeaderProps> = ({ onNavigate }) => {
         <nav className="flex gap-6">
           <button onClick={() => onNavigate(Section.WORK)} className="text-[10px] font-black uppercase tracking-widest hover:underline">Work</button>
           <button onClick={() => onNavigate(Section.ABOUT)} className="text-[10px] font-black uppercase tracking-widest hover:underline">About</button>
+          <button onClick={() => onNavigate(Section.CONTACT)} className="text-[10px] font-black uppercase tracking-widest hover:underline">Contact</button>
         </nav>
       </div>
     </header>
